@@ -1,0 +1,97 @@
+<style>
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #eef442;
+}
+div.maincontainer{
+width: 100%;
+height: 95%;
+margin:50px auto;
+font-family: 'Droid Serif', serif;
+position:relative;
+}
+div.main2{
+width: 90%;
+height:100%,
+margin-top: 80px;
+float:left;
+padding: 10px 55px 40px;
+background-color: #42f445;
+border: 15px solid white;
+box-shadow: 0 0 10px;
+border-radius: 2px;
+font-size: 13px;
+}
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+	background-color:#eef442;
+}
+
+div.tab1 button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+	background-color:#eef442;
+}
+div.tab1 button:hover {
+    background-color: #429ef4;
+}
+
+/* Create an active/current tablink class */
+div.tab1 button.active {
+    background-color: #429ef4;
+}
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #429ef4;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #429ef4;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #eff1f2;
+}
+label{
+color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+}
+.buttonStyle{
+padding-left:40%
+
+}
+
+.headingStyle{
+	color: #464646;
+text-shadow: 0 1px 0 #fff;
+font-size: 14px;
+font-weight: bold;
+	font-family: 'Droid Serif', serif;
+}
+</style>

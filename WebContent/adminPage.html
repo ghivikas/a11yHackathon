@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page for WE CARE Card</title>
+<meta name="robots" content="noindex, nofollow">
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="css/tabStyle.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+<!-- Include CSS File Here -->
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+</head>
+<body>
+
+<div class="maincontainer">
+<div class="main2">
+
+<p>
+<!--<img src="images/wf_logo.gif" alt="Wellsfargo Logo"/> -->
+</p>
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'HomePage')" id="defaultOpen" >Home Page Information</button>
+  <button class="tablinks" onclick="openTab(event, 'PaymentInfo')"  id="paymentInfo" >Payment Information</button>
+  <button class="tablinks" onclick="openTab(event, 'ConfirmationInfo')"  id="confirmationInfo" >Confirmation Information</button>
+</div>
+
+<div id="HomePage" class="tabcontent">
+<h1 class="headingStyle" >WE CARE CARD</h1>
+
+
+  
+  <table width="100%" style="text-align:center">
+  <tr><td class="table_td_width" > <label>Prefix : </label> </td>
+ <td style="text-align:left">
+  <select>
+   <option value="Mr.">Mr.</option>
+   <option value="Ms.">Ms.</option>
+    <option value="Mrs.">Mrs.</option>
+</select> 
+  </td></tr>
+<tr> <td class="table_td_width" >
+  <label class="label">Full Name : </label> </td>
+ <td style="text-align:left">
+  <input type="text" id="name" />
+  </td></tr>
+    
+      
+  <tr><td class="table_td_width"> <label class="label">Date Of Birth </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="dob" name="date" /> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label>Age </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="age" /> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label>SSN </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="ssn" /> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label class="label">Address</label> </td>
+ <td style="text-align:left">
+<textarea rows="4" cols="50" name="address" > 
+ Enter Address here...</textarea> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label class="label">Email </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="email" /> 
+  </td></tr>
+   
+  </td></tr>
+   <tr><td class="table_td_width"> <label class="label">Phone number </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="phoneNumber" /> 
+  </td></tr>
+   
+  </td></tr>
+  </table>
+     
+   <br/><br/>
+    <div class="buttonStyle">
+  <input type="button" value ="submit"   id="submitTempateData"  onclick="SubmitTemplateData(event)" />
+  
+  </div>
+	 
+
+
+</div>
+
+
+<div id="PaymentInfo" class="tabcontent">
+  <h1 =class="headingStyle">Payment Information</h3>
+  <table width="100%" style="text-align:center">
+<tr> <td class="table_td_width" >
+  <label>Date : </label> </td>
+ <td style="text-align:left">
+  <input type="date" name="date">
+  </td></tr>
+  
+  <tr><td class="table_td_width" > <label>Prefix : </label> </td>
+ <td style="text-align:left">
+  <select>
+   <option value="Mr.">Mr.</option>
+   <option value="Ms.">Ms.</option>
+   
+</select> 
+  </td></tr>
+  
+  <tr><td class="table_td_width" > <label>Emp Name
+                (As per Company Record) </label> </td>
+ <td style="text-align:left"><input type="text" id="name" /> 
+  </td></tr>
+  
+  <tr><td class="table_td_width"> <label>Employee ID </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="empid" /> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label>Designation </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="deisgnation" /> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label>Address(As per Company Record)</label> </td>
+ <td style="text-align:left">
+<textarea rows="4" cols="50" name="comment" > 
+ Enter Address here...</textarea> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label>Location </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="location" /> 
+  </td></tr>
+   
+  </td></tr>
+   <tr><td class="table_td_width"> <label>Purpose </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="Purpose" /> 
+  </td></tr>
+   
+  </td></tr>
+  </table>
+   <div class="buttonStyle">
+  <input type="button" value ="submit"   id="submitAddresstData"  onclick="overlayAddress()"/>
+  
+  </div>
+  
+<div id="overlayAddress" style="visibility:hidden">
+     <div>
+          <input type="Button" value="Download Address Proof" onclick="openAddressPdf()" id="fromAddress" />  
+     </div>
+</div>
+</div>
+
+<div id="ConfirmationInfo" class="tabcontent">
+<h1 class="headingStyle">Confirmation Info </h1>
+<table width="100%" style="text-align:center">
+<tr> <td class="table_td_width" >
+  <label>Date : </label> </td>
+ <td style="text-align:left">
+  <input type="date" name="date">
+  </td></tr>
+  
+  <tr><td class="table_td_width" > <label>Prefix : </label> </td>
+ <td style="text-align:left">
+  <select>
+   <option value="Mr.">Mr.</option>
+   <option value="Ms.">Ms.</option>
+   
+</select> 
+  </td></tr>
+  
+  <tr><td class="table_td_width" > <label>Team Member Name
+                (As per Company Record) </label> </td>
+ <td style="text-align:left"><input type="text" id="name" /> 
+  </td></tr>
+  
+  <tr><td class="table_td_width"> <label>Employee ID </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="empid" /> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label>Designation </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="deisgnation" /> 
+  </td></tr>
+  <tr><td class="table_td_width"> <label>Joining Date</label> </td>
+ <td style="text-align:left">
+ <input type="date" name="jDate"/>
+  </td></tr>
+  <tr><td class="table_td_width"> <label>Location </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="location" /> 
+  </td></tr>
+   
+  </td></tr>
+   <tr><td class="table_td_width"> <label>Purpose </label> </td>
+ <td style="text-align:left">
+ <input type="text" id="Purpose" /> 
+  </td></tr>
+   
+  </td></tr>
+  
+  </table>
+  <br/>  <br/>
+  <div class="button">
+  <input type="button" value ="submit"   id="submitEmploymentData"  onclick="overlay()"/>
+  
+  </div>
+  
+
+
+</div>
+
+
+
+
+
+</div>
+</div>
+
+<script>
+var isAddress="false",isEmployment="false";
+$(function(){
+$( "#dob" ).datepicker();
+
+//$( "#dob" ).datepicker( "option", "mm/dd/yyyy", $(this).val() );
+
+});
+function selectTemplate(){
+
+templateType=document.getElementById("templateId").value;
+var addressfileLink,employmentFileLink;
+
+if(templateType=="Address")
+{
+
+addressfileLink = document.getElementById("addressFile");
+addressfileLink.style.display="block"
+employmentFileLink = document.getElementById("employmentFile");
+employmentFileLink.style.display="none"
+newLink = document.getElementById("newTemplateValue");
+newLink.style.display="none"
+newLabel = document.getElementById("newTemplateLabel");
+newLabel.style.display="none"
+}
+if(templateType=="Employment")
+{
+
+employmentFileLink = document.getElementById("employmentFile");
+employmentFileLink.style.display="block"
+addressfileLink = document.getElementById("addressFile");
+addressfileLink.style.display="none"
+
+newLink = document.getElementById("newTemplateValue");
+newLink.style.display="none"
+newLabel = document.getElementById("newTemplateLabel");
+newLabel.style.display="none"
+}
+if(templateType=="newValue")
+{
+
+employmentFileLink = document.getElementById("employmentFile");
+employmentFileLink.style.display="none"
+addressfileLink = document.getElementById("addressFile");
+addressfileLink.style.display="none"
+newLink = document.getElementById("newTemplateValue");
+newLink.style.display="block"
+newLabel = document.getElementById("newTemplateLabel");
+newLabel.style.display="block"
+}
+
+}
+
+function SubmitTemplateData(evt){
+var templateType;
+var tabName;
+
+templateType=document.getElementById("templateId").value;
+
+if(templateType=="")
+{
+alert("Please insert Template Name");
+}
+if(templateType=="Address")
+{
+
+el1 = document.getElementById("addressTab");
+el1.style.display="block"
+
+}
+if(templateType=="Employment")
+{
+el2 = document.getElementById("employmentTab");
+el2.style.display="block"
+tabName="EmploymentLetter"
+}
+
+
+}
+function openTab(evt, tabName) {
+
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+
+
+function overlay() {
+	el = document.getElementById("overlay");
+	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+	
+}
+
+
+function overlayAddress(){
+
+el12 = document.getElementById("overlayAddress");
+	el12.style.visibility = (el12.style.visibility == "visible") ? "hidden" : "visible";
+}
+<!-- function openFileOption() {   document.getElementById("file1").click(); } -->
+function generatePDF(){
+alert("PDF will be downloaded");
+}
+function printPDF(){
+
+alert("pdf will be printed ");
+
+}
+function openAddressPdf(){ 
+var fromAddress= document.getElementById("fromAddress");
+
+ href1 = "files/1591483_AddressProofLetter_1-27-2016-2.pdf"; 
+ window.open(href1,"resizeable,scrollbar");  
+
+}
+function openEmploymentPdf(){ 
+var fromEmployment= document.getElementById("fromEmployment");
+
+ href2 = "files/1591483_EmploymentProofLetter_6-13-2017.pdf"; 
+ window.open(href2,"resizeable,scrollbar");  
+
+
+}
+
+</script>
+
+<style>
+.table_td_width{
+text-align: left;
+width: 50%;
+padding-left: 30%;
+
+}
+.table_admin_width{
+text-align: left;
+width: 45%;
+padding-left: 35%;
+
+}
+#overlay div {
+     width:300px;
+     margin: 100px auto;
+     background-color: rgba(187, 255, 184, 0.65);;
+     border:1px solid #000;
+     padding:15px;
+     text-align:center;
+}
+
+#overlayAddress div {
+     width:300px;
+     margin: 100px auto;
+     background-color: rgba(187, 255, 184, 0.65);;
+     border:1px solid #000;
+     padding:15px;
+     text-align:center;
+}
+
+</style>
+
+</body>
+</html>
