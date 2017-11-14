@@ -29,21 +29,15 @@
 </div>
 
 <div class="tab">
-<div class="tooltip">
+
   <button class="tablinks" onclick="openTab(event, 'HomePage')" id="defaultOpen" >Home </button>
-  <span class="tooltiptext">Home</span>
-  <br/>
-</div>
-<div class="tooltip">
+  
+
   <button class="tablinks" onclick="openTab(event, 'PaymentInfo')"  id="paymentInfo" >Payment </button>
-  <span class="tooltiptext">Payment</span>
-  <br/>
-</div>
-<div class="tooltip">
+  
+
   <button class="tablinks" onclick="openTab(event, 'ConfirmationInfo')"  id="confirmationInfo" >Confirmation </button>
-  <span class="tooltiptext">Confirmation</span>
-  <br/>
-</div>
+  
 </div>
 
 <div id="HomePage" class="tabcontent">

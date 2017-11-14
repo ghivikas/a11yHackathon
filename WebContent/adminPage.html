@@ -46,7 +46,7 @@
 
   
   <table width="100%" style="text-align:center">
-  <tr><td class="table_td_width" > <label>Prefix : </label> </td>
+  <tr><td class="table_td_width" > <label class="label">Prefix : </label> </td>
  <td style="text-align:left">
   <select>
    <option value="Mr.">Mr.</option>
@@ -65,10 +65,7 @@
  <td style="text-align:left">
  <input type="text" id="dob" name="date" /> 
   </td></tr>
-  <tr><td class="table_td_width"> <label>Age </label> </td>
- <td style="text-align:left">
- <input type="text" id="age" /> 
-  </td></tr>
+ 
   <tr><td class="table_td_width"> <label>SSN </label> </td>
  <td style="text-align:left">
  <input type="text" id="ssn" /> 
@@ -92,9 +89,23 @@
   </td></tr>
   </table>
      
-   <br/><br/>
+   <br/>
+  <h3 class="h2headingStyle"> Choose Your Card </h3>
+  
+  <table width="100%" style="text-align:center">
+  <tr><td class="table_td_width" style="width:25%"><label class="label">Select your plan:</label></td>
+ <td style="text-align:left"> <select>
+   <option value="Silver">Silver</option>
+   <option value="Gold">Gold</option>
+    <option value="Platinum">Platinum</option>
+</select> 
+  </td></tr>
+  <tr><td class="table_td_width" >
+  <img src="images/silver.png" style="width:150px;height:150px" alt="Silver Card" onclick="showSilverPlan()">
+   </td></tr></table>
+   <br/>
     <div class="buttonStyle">
-  <input type="button" value ="submit"   id="submitTempateData"  onclick="SubmitTemplateData(event)" />
+  <input type="button" value ="next"   id="submitTempateData"  onclick="SubmitTemplateData(event)" />
   
   </div>
 	 
