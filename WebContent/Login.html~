@@ -20,7 +20,6 @@
 <img src="images/weCare.png" alt="We care Logo" style="width:100px;height;100px;margin-left:auto;margin-right:auto"/> 
 
   <span class="tooltiptext">We Care the People</span>
-  <br/>
 </div>
 <br/>
 <form class="form" method="post" action="#">

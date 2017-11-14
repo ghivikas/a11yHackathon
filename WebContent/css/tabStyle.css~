@@ -5,7 +5,7 @@ body {font-family: "Lato", sans-serif;}
 div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #eef442;
+    background-color: #7133ff ;
 }
 div.maincontainer{
 width: 100%;
@@ -20,7 +20,7 @@ height:100%,
 margin-top: 80px;
 float:left;
 padding: 10px 55px 40px;
-background-color: #42f445;
+background-color:  #fff933 ;
 border: 15px solid white;
 box-shadow: 0 0 10px;
 border-radius: 2px;
@@ -36,7 +36,9 @@ div.tab button {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
-	background-color:#eef442;
+    font-weight: bold;
+    color:white;
+	background-color:#7133ff ;
 }
 
 div.tab1 button {
@@ -48,15 +50,22 @@ div.tab1 button {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
-	background-color:#eef442;
+    font-weight: bold;
+    color:white;
+	background-color: #7133ff ;
 }
 div.tab1 button:hover {
     background-color: #429ef4;
+    
 }
 
+div.tab button:focus { color:#55009d; background:#73d216; }
+div.tab1 button:focus { color:#55009d; background:#73d216; }
 /* Create an active/current tablink class */
 div.tab1 button.active {
-    background-color: #429ef4;
+    background-color: #eff1f2;
+    color: black;
+    font-weight: bold;
 }
 /* Change background color of buttons on hover */
 div.tab button:hover {
@@ -65,7 +74,9 @@ div.tab button:hover {
 
 /* Create an active/current tablink class */
 div.tab button.active {
-    background-color: #429ef4;
+    background-color: #eff1f2;
+    color: black;
+    font-weight: bold;
 }
 
 /* Style the tab content */
@@ -77,7 +88,7 @@ div.tab button.active {
     background-color: #eff1f2;
 }
 label{
-color: #464646;
+color: black;
 text-shadow: 0 1px 0 #fff;
 font-size: 14px;
 font-weight: bold;
@@ -88,10 +99,34 @@ padding-left:40%
 }
 
 .headingStyle{
-	color: #464646;
+	color: black;
+	align-content: center;
 text-shadow: 0 1px 0 #fff;
-font-size: 14px;
+font-size: 30px;
 font-weight: bold;
 	font-family: 'Droid Serif', serif;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 0px dotted white;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 </style>
